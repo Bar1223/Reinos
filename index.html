@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Reino del Conocimiento</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Introducción -->
+    <div id="introduccion" class="caja">
+        <h1>El Reino del Conocimiento</h1>
+        <p>
+            Caminabas por un sendero rodeado de árboles altos cuando un destello de luz dorada capturó tu atención. Al acercarte, un portal resplandeciente apareció, invitándote a cruzarlo.
+        </p>
+        <p>
+            Sin poder resistir, diste un paso al frente y te encontraste en un vasto reino lleno de colores y paisajes deslumbrantes. Frente a ti, un hombre anciano, vestido con túnicas decoradas con símbolos antiguos, te observaba con ojos sabios.
+        </p>
+        <blockquote>
+            "¡Bienvenido, viajero! Soy el Guardián del Conocimiento. Este es un reino donde la sabiduría lo rige todo. Aquí enfrentarás desafíos en Matemáticas, Ciencias, Español e Historia. Tus decisiones moldearán tu camino y fortalecerán tus habilidades. Ahora dime, ¿aceptas el reto?"
+        </blockquote>
+        <button onclick="mostrarHistoria()">Acepto el reto</button>
+    </div>
+
+    <!-- Primera parte de la historia -->
+    <div id="primera-parte" class="caja hidden">
+        <h2>El Sabio y los Caminos del Conocimiento</h2>
+        <p>
+            El sabio asiente, complacido con tu decisión. Levanta su báculo y señala cuatro caminos que se abren frente a ti. 
+            Cada uno conduce a un reino diferente, lleno de desafíos que pondrán a prueba tu intelecto y habilidades.
+        </p>
+        <blockquote>
+            "Estos son los Caminos del Conocimiento: Matemáticas, Ciencias, Español e Historia. Cada uno guarda lecciones valiosas, pero solo tú decidirás cuál explorar primero."
+        </blockquote>
+        <button onclick="mostrarReinos()">Continuar</button>
+    </div>
+
+    <!-- Menú de reinos -->
+    <div id="menu-reinos" class="caja hidden">
+        <h2>Elige tu Reino</h2>
+        <p>"Elige sabiamente, viajero. Cada reino te enseñará algo único."</p>
+        <div class="opciones-reinos">
+            <button onclick="iniciarReino('matematicas')">Reino de las Matemáticas</button>
+            <button onclick="iniciarReino('ciencias')">Reino de las Ciencias</button>
+            <button onclick="iniciarReino('espanol')">Reino de Español</button>
+            <button onclick="iniciarReino('historia')">Reino de Historia</button>
+        </div>
+    </div>
+
+    <!-- Contenedor de desafíos -->
+    <div id="desafios" class="caja hidden">
+        <h2 id="titulo-reino"></h2>
+        <p id="descripcion-reino"></p>
+        <div id="opciones"></div>
+        <button onclick="volverAlMenu()">Volver al menú de reinos</button>
+    </div>
+
+    <!-- Pie de página con contadores -->
+    <footer class="caja">
+        <p>
+            Aptitudes: 
+            <span id="puntos-matematicas">Matemáticas: 0</span> | 
+            <span id="puntos-ciencias">Ciencias: 0</span> | 
+            <span id="puntos-espanol">Español: 0</span> | 
+            <span id="puntos-historia">Historia: 0</span>
+        </p>
+    </footer>
+    
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js')
+            .then(() => console.log('Service Worker registrado'))
+            .catch((error) => console.log('Error al registrar el Service Worker:', error));
+    }
+</script>
+
+    
+</body>
+</html>

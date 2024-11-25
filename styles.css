@@ -1,0 +1,103 @@
+/* Estilos generales */
+body {
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(145deg, #dff7ff, #bde0fe); /* Degradado suave azul claro */
+    color: #333333; /* Texto oscuro para buena legibilidad */
+    margin: 0;
+    padding: 0;
+}
+
+/* Caja general para cada bloque */
+.caja {
+    background: linear-gradient(120deg, #ffffff, #eef2f3); /* Fondo suave con blanco y gris claro */
+    border: 2px solid #a2d2ff; /* Azul pastel */
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Títulos de la historia */
+h1, h2 {
+    color: #0096c7; /* Azul vibrante pero amigable */
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px #ade8f4; /* Efecto de brillo sutil */
+}
+
+/* Estilos de párrafos */
+p {
+    line-height: 1.8;
+    font-size: 1.2rem;
+    color: #555555; /* Gris oscuro para un texto equilibrado */
+    text-align: justify;
+}
+
+/* Estilo para citas */
+blockquote {
+    font-style: italic;
+    color: #333333; /* Texto oscuro */
+    background: linear-gradient(120deg, #f9f9f9, #d8e3e7); /* Fondo neutro */
+    padding: 15px;
+    margin: 20px 0;
+    border-left: 6px solid #0077b6; /* Azul brillante */
+    border-radius: 10px;
+    text-shadow: none; /* Texto limpio */
+}
+
+/* Botones */
+button {
+    background: linear-gradient(45deg, #90e0ef, #0077b6); /* Azul pastel con degradado */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 10px 0; /* Separación entre botones */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #0077b6, #90caf9); /* Hover más claro */
+    transform: translateY(-3px) scale(1.05); /* Efecto flotante */
+}
+
+/* Opciones de los reinos */
+.opciones-reinos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaciado amplio entre botones */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 30px;
+    color: #555555; /* Gris oscuro */
+}
+
+/* Clases de ocultamiento */
+.hidden {
+    display: none;
+}
+
+/* Medios para pantallas pequeñas */
+@media (max-width: 600px) {
+    .caja {
+        padding: 15px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
